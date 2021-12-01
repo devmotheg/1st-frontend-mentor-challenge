@@ -1,0 +1,195 @@
+/*!
+  @author Mohamed Muntasir
+  @link https://github.com/devmotheg
+  */
+
+/* General */
+
+body {
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-color: hsl(225, 100%, 94%);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+/* Container */
+
+.container {
+  width: 330px;
+  height: fit-content;
+  background-color: white;
+  border-radius: calc(16em / 16);
+  overflow: hidden;
+  display: grid;
+  gap: calc(25em / 16);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  .container {
+    width: 420px;
+  }
+}
+
+/* Image */
+
+.container > img {
+  width: 100%;
+}
+
+/* Order */
+
+h1 {
+  font-size: calc(21.5em / 16);
+  font-weight: 900;
+  text-align: center;
+  color: hsl(223, 47%, 23%);
+}
+
+.order p {
+  font-size: calc(16em / 16);
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  color: hsl(224, 23%, 55%);
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  h1 {
+    font-size: calc(25.5em / 16);
+  }
+
+  .order p {
+    width: 70%;
+  }
+}
+
+/* Plan */
+
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  padding: calc(12em / 16);
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "icon plan change" " icon price change";
+  grid-template-columns: auto 1fr auto;
+  border-radius: calc(10em / 16);
+}
+
+.plan img {
+  grid-area: icon;
+  align-self: center;
+  margin-right: calc(15em / 16);
+}
+
+.plan p:first-of-type {
+  align-self: center;
+  font-weight: 700;
+  grid-area: plan;
+  margin: 0;
+  color: hsl(223, 47%, 23%);
+}
+
+.plan p:last-of-type {
+  align-self: center;
+  grid-area: price;
+  margin: 0;
+  color: hsl(224, 23%, 55%);
+}
+
+.plan button {
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  grid-area: change;
+  background-color: transparent;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+.plan button:hover {
+  opacity: 0.7;
+  text-decoration: transparent;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  .plan {
+    padding: calc(20em / 16);
+    width: 80%;
+  }
+}
+
+/* "Proceed to Payment" & "Cancel Order" buttons */
+
+.buttons button {
+  margin: auto;
+  display: block;
+  font-weight: 700;
+}
+
+.buttons button:first-of-type {
+  width: 85%;
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  box-shadow: 0 16px 20px 0 hsl(245, 75%, 52%, 0.2);
+  margin-bottom: calc(30em / 16);
+  border-radius: calc(12em / 16);
+  padding: calc(16em / 16);
+}
+
+.buttons button:first-of-type:hover {
+  opacity: 0.7;
+}
+
+.buttons button:last-of-type {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  color: hsl(223, 47%, 23%);
+  margin-bottom: calc(35em / 16);
+  opacity: 0.7;
+}
+
+.buttons button:last-of-type:hover {
+  opacity: 1;
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  .buttons button:first-of-type {
+    width: 80%;
+  }
+
+  .buttons button:last-of-type {
+    margin-bottom: calc(50em / 16);
+  }
+}
